@@ -9,23 +9,33 @@
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <title>trust4leaders</title>
 
-    <!--  Essential META Tags -->
+    <!-- META Tags -->
     <meta property="og:title" content="trust4leaders">
     <meta property="og:description"
         content="We are on a mission to improve outcomes by developing trust between people, things and/or situations.">
-    <meta property="og:image" content="/img/og-image.jpg">
+    <meta property="og:image" content="./img/og-image.jpg">
     <meta property="og:url" content="#">
     <meta name="twitter:card" content="summary_large_image">
-
-
-    <!--  Non-Essential, But Recommended -->
-
     <meta property="og:site_name" content="trust4leaders">
     <meta name="twitter:image:alt" content="Demystify trust and trust4leaders brand image">
 </head>
 
-<body>
-    hello world
+<body style="visibility: hidden;" onload="js_Load()">>
+    <main class="main">
+        <div class="main__content-container">
+            <img class="logo" src="./assets/img/trust4leaders-logo-color.svg" alt="trust4leaders logo">
+            <h1>NEW WEBSITE COMING SOON.</h1>
+            <a href="mailto:some@email.com">some@email.com</a>
+        </div>
+
+    </main>
+
+    <!-- Makes sure the styles load in first, before showing content -->
+    <script>
+        const js_Load = () => {
+            document.body.style.visibility = 'visible';
+        }
+    </script>
 </body>
 
 </html>
