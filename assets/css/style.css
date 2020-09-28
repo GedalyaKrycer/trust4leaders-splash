@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@500&family=Roboto:wght@700&display=swap');
 
+/* ———————————————————————————————————————————
+Base Styles 
+—————————————————————————————————————————————— */
 * {
     box-sizing: border-box;
 }
@@ -7,7 +10,7 @@
 h1 {
     font-family: 'M PLUS Rounded 1c', Trebuchet, Tahoma, Arial, sans-serif;
     font-size: 76px;
-    line-height: 85px;
+    /* line-height: 85px; */
     max-width: 555px;
 
 }
@@ -19,9 +22,9 @@ a {
     background: #D96B94;
     color: white;
     text-decoration: none;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-    -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-    -moz-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.15);
+    -webkit-box-shadow: 0 4px 4px rgba(0, 0, 0, 0.15);
+    -moz-box-shadow: 0 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 40px;
     padding: 20px 55px;
     transition: ease .4s;
@@ -33,19 +36,98 @@ a:hover {
     transition: ease .4s;
 }
 
+a:focus {
+    color: #D96B94;
+    background: white;
+    transition: ease .4s;
+}
+
+a:active {
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0.15);
+    -webkit-box-shadow: 0 0 0 rgba(0, 0, 0, 0.15);
+    -moz-box-shadow: 0 0 0 rgba(0, 0, 0, 0.15);
+}
 
 
+/* ———————————————————————————————————————————
+Page Element Classes  
+—————————————————————————————————————————————— */
 .main {
-    background: url('../img/bg-hero.jpg') no-repeat;
+    background: url('../img/bg-hero-desktop.jpg') no-repeat;
     background-size: cover;
     min-height: 100vh;
     color: white;
-
 }
+
 .main__content-container {
     padding: 70px 150px;
 }
 
 .logo {
     max-width: 525px;
+}
+
+
+
+/* ===========================================
+Mobile Styles  
+============================================== */
+@media screen and (max-width: 1100px) {
+    .main {
+        background: url('../img/bg-hero-tablet.jpg') no-repeat;
+        background-size: cover;
+        background-position: right;
+
+    }
+
+    .main__content-container {
+        padding: 70px 155px;
+    }
+
+    h1 {
+        max-width: 545px;
+    
+    }
+    
+}
+
+@media screen and (max-width: 812px) {
+
+    .main__content-container {
+        padding: 30px 80px;
+        background-size: cover;
+    }
+
+    h1 {
+        max-width: 545px;
+    
+    }
+    
+}
+
+@media screen and (max-width: 662px) {
+    .main {
+        background: url('../img/bg-hero-mobile.jpg') no-repeat;
+        background-size: cover;
+        background-position: top;
+
+    }
+
+    .main__content-container {
+        padding: 20px 20px;
+    }
+
+    h1 {
+        font-size: 40px;
+        text-align: center;
+        margin: 20px auto;
+    
+    }
+
+    a {
+        margin: 0 auto 30px;
+        display: block;
+        text-align: center;
+    }
+    
 }
